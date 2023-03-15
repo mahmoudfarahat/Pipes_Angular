@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ConvertPipe implements PipeTransform {
 
-  transform(value: number, targetUnits:string): unknown {
+  transform(value: number, targetUnits:string): any {
     console.log(targetUnits)
     console.log(value)
     if(!value){
