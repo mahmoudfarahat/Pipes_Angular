@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'pipes';
+  name! : string
+  date!: string
+amount! : number
+  onNameChange(event : Event){
+this.name = (event.target as HTMLTextAreaElement).value
+  }
+  onDateChange(event : Event){
+    this.date = (event.target as HTMLTextAreaElement).value
+  }
+  onAmountChange(event : Event){
+    this.amount = parseFloat((event.target as HTMLTextAreaElement).value)
+  }
 }
